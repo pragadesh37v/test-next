@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[194],{9549:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/custom/one",function(){return t(3888)}])},3888:function(n,u,t){"use strict";t.r(u);var e=t(5893);u.default=function(){return(0,e.jsx)("h1",{children:"Custome page"})}}},function(n){n.O(0,[774,888,179],function(){return n(n.s=9549)}),_N_E=n.O()}]);

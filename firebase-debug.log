@@ -1,0 +1,256 @@
+[debug] [2023-01-21T18:11:33.080Z] ----------------------------------------------------------------------
+[debug] [2023-01-21T18:11:33.083Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pragadesh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions,hosting
+[debug] [2023-01-21T18:11:33.083Z] CLI Version:   11.21.0
+[debug] [2023-01-21T18:11:33.084Z] Platform:      win32
+[debug] [2023-01-21T18:11:33.084Z] Node Version:  v16.17.0
+[debug] [2023-01-21T18:11:33.085Z] Time:          Sat Jan 21 2023 23:41:33 GMT+0530 (India Standard Time)
+[debug] [2023-01-21T18:11:33.085Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-21T18:11:33.176Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-21T18:11:33.177Z] > authorizing via signed-in user (praha37v@gmail.com)
+[debug] [2023-01-21T18:11:33.177Z] [iam] checking project produce-ui-next for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-21T18:11:33.179Z] > refreshing access token with scopes: []
+[debug] [2023-01-21T18:11:33.181Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-21T18:11:33.181Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-21T18:11:33.346Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-01-21T18:11:33.346Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-21T18:11:33.352Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions [none]
+[debug] [2023-01-21T18:11:33.352Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions x-goog-quota-user=projects/produce-ui-next
+[debug] [2023-01-21T18:11:33.353Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-21T18:11:34.628Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions 200
+[debug] [2023-01-21T18:11:34.629Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-21T18:11:34.630Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/produce-ui-next/serviceAccounts/produce-ui-next@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-01-21T18:11:34.630Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/produce-ui-next/serviceAccounts/produce-ui-next@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-21T18:11:36.242Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/produce-ui-next/serviceAccounts/produce-ui-next@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2023-01-21T18:11:36.242Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/produce-ui-next/serviceAccounts/produce-ui-next@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2023-01-21T18:11:36.243Z] [functions] service account IAM check errored, deploy may fail:HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2023-01-21T18:11:36.245Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next [none]
+[debug] [2023-01-21T18:11:36.798Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next 200
+[debug] [2023-01-21T18:11:36.799Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next {"projectId":"produce-ui-next","projectNumber":"372981820539","displayName":"produce-ui-next","name":"projects/produce-ui-next","resources":{"hostingSite":"produce-ui-next"},"state":"ACTIVE","etag":"1_0d0093da-b8ff-4025-8726-019ab9632904"}
+[info] 
+[info] === Deploying to 'produce-ui-next'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-01-21T18:11:36.803Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next [none]
+[debug] [2023-01-21T18:11:37.115Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next 200
+[debug] [2023-01-21T18:11:37.115Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next {"projectId":"produce-ui-next","projectNumber":"372981820539","displayName":"produce-ui-next","name":"projects/produce-ui-next","resources":{"hostingSite":"produce-ui-next"},"state":"ACTIVE","etag":"1_0d0093da-b8ff-4025-8726-019ab9632904"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-01-21T18:11:37.119Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-01-21T18:11:37.119Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/produce-ui-next
+[debug] [2023-01-21T18:11:37.120Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-01-21T18:11:37.121Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/produce-ui-next
+[debug] [2023-01-21T18:11:37.122Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudbuild.googleapis.com [none]
+[debug] [2023-01-21T18:11:37.122Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudbuild.googleapis.com x-goog-quota-user=projects/produce-ui-next
+[debug] [2023-01-21T18:11:37.123Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/artifactregistry.googleapis.com [none]
+[debug] [2023-01-21T18:11:37.123Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/artifactregistry.googleapis.com x-goog-quota-user=projects/produce-ui-next
+[debug] [2023-01-21T18:11:37.840Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/runtimeconfig.googleapis.com 200
+[debug] [2023-01-21T18:11:37.840Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-01-21T18:11:38.784Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudfunctions.googleapis.com 200
+[debug] [2023-01-21T18:11:38.784Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-01-21T18:11:39.031Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/artifactregistry.googleapis.com 200
+[debug] [2023-01-21T18:11:39.031Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-01-21T18:11:39.821Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudbuild.googleapis.com 200
+[debug] [2023-01-21T18:11:39.821Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/produce-ui-next/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-01-21T18:11:39.823Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next/adminSdkConfig [none]
+[debug] [2023-01-21T18:11:40.403Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next/adminSdkConfig 200
+[debug] [2023-01-21T18:11:40.403Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next/adminSdkConfig {"projectId":"produce-ui-next","storageBucket":"produce-ui-next.appspot.com"}
+[debug] [2023-01-21T18:11:40.405Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/produce-ui-next/configs [none]
+[debug] [2023-01-21T18:11:40.755Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/produce-ui-next/configs 200
+[debug] [2023-01-21T18:11:40.755Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/produce-ui-next/configs {}
+[debug] [2023-01-21T18:11:40.758Z] Validating nodejs source
+[debug] [2023-01-21T18:11:42.463Z] > [functions] package.json contents: {
+  "name": "produce-ui",
+  "main": "server.js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "firebase deploy --only functions,hosting"
+  },
+  "dependencies": {
+    "@next/font": "13.1.4",
+    "firebase-functions": "^4.2.0",
+    "next": "13.1.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
+[debug] [2023-01-21T18:11:42.463Z] Building nodejs source
+[debug] [2023-01-21T18:11:42.464Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-01-21T18:11:42.744Z] Serving at port 9005
+
+[debug] [2023-01-21T18:11:43.146Z] Got response from /__/functions.yaml {"endpoints":{"nextServer":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"nextServer"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-01-21T18:11:43.154Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing . directory for uploading... 
+[info] i  functions: packaged C:\Users\Pragadesh\Desktop\NEXT\produce-ui (17.24 MB) for uploading 
+[debug] [2023-01-21T18:11:44.868Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/-/functions [none]
+[debug] [2023-01-21T18:11:45.496Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/-/functions 200
+[debug] [2023-01-21T18:11:45.496Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/-/functions {}
+[debug] [2023-01-21T18:11:45.499Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/produce-ui-next/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-01-21T18:11:47.227Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/produce-ui-next/locations/-/functions 200
+[debug] [2023-01-21T18:11:47.227Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/produce-ui-next/locations/-/functions {}
+[debug] [2023-01-21T18:11:47.235Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next [none]
+[debug] [2023-01-21T18:11:48.103Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next 200
+[debug] [2023-01-21T18:11:48.103Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/produce-ui-next {"projectId":"produce-ui-next","projectNumber":"372981820539","displayName":"produce-ui-next","name":"projects/produce-ui-next","resources":{"hostingSite":"produce-ui-next"},"state":"ACTIVE","etag":"1_0d0093da-b8ff-4025-8726-019ab9632904"}
+[debug] [2023-01-21T18:11:48.107Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/produce-ui-next/versions [none]
+[debug] [2023-01-21T18:11:48.107Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/produce-ui-next/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-21T18:11:50.107Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/produce-ui-next/versions 200
+[debug] [2023-01-21T18:11:50.107Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/produce-ui-next/versions {"name":"projects/372981820539/sites/produce-ui-next/versions/d68c2db3b01126a5","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-21T18:11:50.107Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-01-21T18:11:50.108Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions [none]
+[debug] [2023-01-21T18:11:50.108Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions x-goog-quota-user=projects/produce-ui-next
+[debug] [2023-01-21T18:11:50.108Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-01-21T18:11:51.333Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions 200
+[debug] [2023-01-21T18:11:51.333Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/produce-ui-next:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-01-21T18:11:51.334Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-01-21T18:11:51.334Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-01-21T18:11:51.334Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2023-01-21T18:12:03.396Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-01-21T18:12:03.397Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-555961254964.us-central1.cloudfunctions.appspot.com/43c9c009-de74-4150-84d8-02f710aa9b47.zip?GoogleAccessId=service-372981820539@gcf-admin-robot.iam.gserviceaccount.com&Expires=1674326524&Signature=Pi4i6mUev7BPrLtMa3ZKAkqCi%2FY571G%2BJMKEUq9ThljdKoR6QybIG40RPtk55L78mHUR8IDvySQ8irRXFi%2B2grxBO9eieYhOM44i%2FUoq%2FdRnd%2B28t7nE%2FSolPdVb5NtvVyTXH2UwNIHf1gkgpWe6mdmapF2%2F9IJQuj%2Fb5wZaw5kgyfG%2FrFEPrJ3vmWm4wK8s2JTPYYbXOhvMxIPlr1au%2B4jyfANlKVOx4qzh0t9yO1jv3fOrZFSJ%2FhtiZVOXc5ROqWevsIkusXmNTihZE%2BKB94U10UY82QFwpfi6JNGBzfOo6dmuG3cF46yTVPd7K6trBQ5TEePFGcAsGc1Ng5Hqnw%3D%3D"}
+[debug] [2023-01-21T18:12:03.398Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-555961254964.us-central1.cloudfunctions.appspot.com/43c9c009-de74-4150-84d8-02f710aa9b47.zip GoogleAccessId=service-372981820539%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1674326524&Signature=Pi4i6mUev7BPrLtMa3ZKAkqCi%2FY571G%2BJMKEUq9ThljdKoR6QybIG40RPtk55L78mHUR8IDvySQ8irRXFi%2B2grxBO9eieYhOM44i%2FUoq%2FdRnd%2B28t7nE%2FSolPdVb5NtvVyTXH2UwNIHf1gkgpWe6mdmapF2%2F9IJQuj%2Fb5wZaw5kgyfG%2FrFEPrJ3vmWm4wK8s2JTPYYbXOhvMxIPlr1au%2B4jyfANlKVOx4qzh0t9yO1jv3fOrZFSJ%2FhtiZVOXc5ROqWevsIkusXmNTihZE%2BKB94U10UY82QFwpfi6JNGBzfOo6dmuG3cF46yTVPd7K6trBQ5TEePFGcAsGc1Ng5Hqnw%3D%3D
+[debug] [2023-01-21T18:12:03.398Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-555961254964.us-central1.cloudfunctions.appspot.com/43c9c009-de74-4150-84d8-02f710aa9b47.zip [stream]
+[debug] [2023-01-21T18:12:07.033Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-555961254964.us-central1.cloudfunctions.appspot.com/43c9c009-de74-4150-84d8-02f710aa9b47.zip 200
+[debug] [2023-01-21T18:12:07.034Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-555961254964.us-central1.cloudfunctions.appspot.com/43c9c009-de74-4150-84d8-02f710aa9b47.zip [omitted]
+[info] +  functions: . folder uploaded successfully 
+[info] i  hosting[produce-ui-next]: beginning deploy... 
+[info] i  hosting[produce-ui-next]: found 5 files in public 
+[debug] [2023-01-21T18:12:07.046Z] [hosting] uploading with 200 concurrency
+[debug] [2023-01-21T18:12:07.047Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2023-01-21T18:12:07.060Z] [hosting] hash cache [cHVibGlj] stored for 5 files
+[debug] [2023-01-21T18:12:07.060Z] [hosting][hash queue][FINAL] {"max":7,"min":5,"avg":5.6,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":11}
+[debug] [2023-01-21T18:12:07.060Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/372981820539/sites/produce-ui-next/versions/d68c2db3b01126a5:populateFiles [none]
+[debug] [2023-01-21T18:12:07.060Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/372981820539/sites/produce-ui-next/versions/d68c2db3b01126a5:populateFiles {"files":{"/404.html":"1d3d1dde796d1e8730f32886fe28b4ba118aba3e524daaa092b6fcb2fd00b625","/next.svg":"dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","/thirteen.svg":"399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c","/vercel.svg":"1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","/favicon.ico":"43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1"}}
+[debug] [2023-01-21T18:12:08.128Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/372981820539/sites/produce-ui-next/versions/d68c2db3b01126a5:populateFiles 200
+[debug] [2023-01-21T18:12:08.129Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/372981820539/sites/produce-ui-next/versions/d68c2db3b01126a5:populateFiles {"uploadRequiredHashes":["dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c","1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1","1d3d1dde796d1e8730f32886fe28b4ba118aba3e524daaa092b6fcb2fd00b625"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files"}
+[debug] [2023-01-21T18:12:08.131Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc [none]
+[debug] [2023-01-21T18:12:08.131Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc [stream]
+[debug] [2023-01-21T18:12:08.132Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c [none]
+[debug] [2023-01-21T18:12:08.132Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c [stream]
+[debug] [2023-01-21T18:12:08.134Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 [none]
+[debug] [2023-01-21T18:12:08.134Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 [stream]
+[debug] [2023-01-21T18:12:08.135Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1 [none]
+[debug] [2023-01-21T18:12:08.135Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1 [stream]
+[debug] [2023-01-21T18:12:08.136Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1d3d1dde796d1e8730f32886fe28b4ba118aba3e524daaa092b6fcb2fd00b625 [none]
+[debug] [2023-01-21T18:12:08.136Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1d3d1dde796d1e8730f32886fe28b4ba118aba3e524daaa092b6fcb2fd00b625 [stream]
+[debug] [2023-01-21T18:12:08.137Z] [hosting][populate queue][FINAL] {"max":1072,"min":1072,"avg":1072,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1079}
+[debug] [2023-01-21T18:12:08.138Z] [hosting] uploads queued: 5
+[debug] [2023-01-21T18:12:09.947Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1d3d1dde796d1e8730f32886fe28b4ba118aba3e524daaa092b6fcb2fd00b625 200
+[debug] [2023-01-21T18:12:09.948Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1d3d1dde796d1e8730f32886fe28b4ba118aba3e524daaa092b6fcb2fd00b625 [stream]
+[debug] [2023-01-21T18:12:10.583Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1 200
+[debug] [2023-01-21T18:12:10.583Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1 [stream]
+[debug] [2023-01-21T18:12:10.646Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c 200
+[debug] [2023-01-21T18:12:10.646Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c [stream]
+[debug] [2023-01-21T18:12:10.917Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 200
+[debug] [2023-01-21T18:12:10.917Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 [stream]
+[debug] [2023-01-21T18:12:10.923Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc 200
+[debug] [2023-01-21T18:12:10.924Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/produce-ui-next/versions/d68c2db3b01126a5/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc [stream]
+[debug] [2023-01-21T18:12:10.924Z] [hosting][upload queue][FINAL] {"max":2795,"min":1818,"avg":2474,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":2795}
+[info] +  hosting[produce-ui-next]: file upload complete 
+[debug] [2023-01-21T18:12:10.928Z] [hosting] deploy completed after 3889ms
+[info] i  functions: creating Node.js 12 function nextServer(us-central1)... 
+[debug] [2023-01-21T18:12:10.949Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions [none]
+[debug] [2023-01-21T18:12:10.949Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions {"name":"projects/produce-ui-next/locations/us-central1/functions/nextServer","sourceUploadUrl":"https://storage.googleapis.com/uploads-555961254964.us-central1.cloudfunctions.appspot.com/43c9c009-de74-4150-84d8-02f710aa9b47.zip?GoogleAccessId=service-372981820539@gcf-admin-robot.iam.gserviceaccount.com&Expires=1674326524&Signature=Pi4i6mUev7BPrLtMa3ZKAkqCi%2FY571G%2BJMKEUq9ThljdKoR6QybIG40RPtk55L78mHUR8IDvySQ8irRXFi%2B2grxBO9eieYhOM44i%2FUoq%2FdRnd%2B28t7nE%2FSolPdVb5NtvVyTXH2UwNIHf1gkgpWe6mdmapF2%2F9IJQuj%2Fb5wZaw5kgyfG%2FrFEPrJ3vmWm4wK8s2JTPYYbXOhvMxIPlr1au%2B4jyfANlKVOx4qzh0t9yO1jv3fOrZFSJ%2FhtiZVOXc5ROqWevsIkusXmNTihZE%2BKB94U10UY82QFwpfi6JNGBzfOo6dmuG3cF46yTVPd7K6trBQ5TEePFGcAsGc1Ng5Hqnw%3D%3D","entryPoint":"nextServer","runtime":"nodejs12","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"59bcb2ba0beba062bfd0dea069aad2c34ca34322"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"ACCESS_TOKEN":"ACCESS_TOKEN","SPACE_ID":"SPACE_ID","NODE_ENV":"production","FIREBASE_CONFIG":"{\"projectId\":\"produce-ui-next\",\"storageBucket\":\"produce-ui-next.appspot.com\"}","GCLOUD_PROJECT":"produce-ui-next","EVENTARC_CLOUD_EVENT_SOURCE":"projects/produce-ui-next/locations/us-central1/functions/nextServer"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null}
+[debug] [2023-01-21T18:12:12.605Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions 403
+[debug] [2023-01-21T18:12:12.605Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/produce-ui-next/locations/us-central1/functions {"error":{"code":403,"message":"Unable to retrieve the repository metadata for projects/produce-ui-next/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.","status":"PERMISSION_DENIED"}}
+[warn] !  functions: failed to create function projects/produce-ui-next/locations/us-central1/functions/nextServer 
+[error] Failed to create function projects/produce-ui-next/locations/us-central1/functions/nextServer
+[debug] [2023-01-21T18:12:12.621Z] Total Function Deployment time: 1671
+[debug] [2023-01-21T18:12:12.621Z] 1 Functions Deployed
+[debug] [2023-01-21T18:12:12.621Z] 1 Functions Errored
+[debug] [2023-01-21T18:12:12.621Z] 0 Function Deployments Aborted
+[debug] [2023-01-21T18:12:12.622Z] Average Function Deployment time: 1667
+[info] 
+[info] Functions deploy had errors with the following functions:
+	nextServer(us-central1)
+[debug] [2023-01-21T18:12:13.713Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-01-21T18:12:13.720Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/produce-ui-next/locations/us-central1/repositories/gcf-artifacts/packages/next_server [none]
+[debug] [2023-01-21T18:12:13.723Z] >>> [apiv2][query] GET https://us.gcr.io/v2/produce-ui-next/gcf/us-central1/tags/list [none]
+[debug] [2023-01-21T18:12:15.173Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/produce-ui-next/locations/us-central1/repositories/gcf-artifacts/packages/next_server 404
+[debug] [2023-01-21T18:12:15.174Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/produce-ui-next/locations/us-central1/repositories/gcf-artifacts/packages/next_server {"error":{"code":404,"message":"Package \"projects/produce-ui-next/locations/us-central1/repositories/gcf-artifacts/packages/next_server\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-01-21T18:12:16.395Z] <<< [apiv2][status] GET https://us.gcr.io/v2/produce-ui-next/gcf/us-central1/tags/list 200
+[debug] [2023-01-21T18:12:16.395Z] <<< [apiv2][body] GET https://us.gcr.io/v2/produce-ui-next/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"produce-ui-next/gcf/us-central1","tags":[]}
+[debug] [2023-01-21T18:12:16.396Z] Could not find image for function projects/produce-ui-next/locations/us-central1/functions/nextServer
+[debug] [2023-01-21T18:12:16.396Z] Functions deploy failed.
+[debug] [2023-01-21T18:12:16.396Z] {
+  "endpoint": {
+    "id": "nextServer",
+    "project": "produce-ui-next",
+    "region": "us-central1",
+    "entryPoint": "nextServer",
+    "platform": "gcfv1",
+    "runtime": "nodejs12",
+    "httpsTrigger": {},
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "ACCESS_TOKEN": "ACCESS_TOKEN",
+      "SPACE_ID": "SPACE_ID",
+      "NODE_ENV": "production",
+      "FIREBASE_CONFIG": "{\"projectId\":\"produce-ui-next\",\"storageBucket\":\"produce-ui-next.appspot.com\"}",
+      "GCLOUD_PROJECT": "produce-ui-next",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/produce-ui-next/locations/us-central1/functions/nextServer"
+    },
+    "codebase": "default",
+    "targetedByOnly": false,
+    "hash": "59bcb2ba0beba062bfd0dea069aad2c34ca34322",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/produce-ui-next/locations/us-central1/functions/nextServer"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/produce-ui-next/locations/us-central1/functions/nextServer",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 403,
+            "message": "Unable to retrieve the repository metadata for projects/produce-ui-next/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.",
+            "status": "PERMISSION_DENIED"
+          }
+        },
+        "response": {
+          "statusCode": 403
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 403, Unable to retrieve the repository metadata for projects/produce-ui-next/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.",
+      "status": 403
+    },
+    "status": 500
+  }
+}
+[debug] [2023-01-21T18:12:16.792Z] Error: Failed to create function nextServer in region us-central1
+    at C:\Users\Pragadesh\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:48:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV1Function (C:\Users\Pragadesh\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:177:32)
+    at async Fabricator.createEndpoint (C:\Users\Pragadesh\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:129:13)
+    at async handle (C:\Users\Pragadesh\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:85:17)
+[error] 
+[error] Error: There was an error deploying functions
